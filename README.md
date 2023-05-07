@@ -1,5 +1,7 @@
 # Frontend Mentor - IP Address Tracker
 
+<img width="1362" alt="image" src="https://user-images.githubusercontent.com/103186430/236706332-4e237ea8-dd9a-4bfb-ad92-95158207e140.png">
+
 This is a solution to the [IP Address Tracker challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0/hub). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
