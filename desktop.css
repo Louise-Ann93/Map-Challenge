@@ -6,7 +6,7 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 		width: 100vw;
-		height: 30%;
+		height: 35%;
 		display: flex;
 		justify-items: center;
 		flex-direction: column;
@@ -137,7 +137,7 @@
 	/* Map */
 	#map {
 		z-index: -5;
-		height: 80%;
+		height: 65%;
 		width: 100vw;
 	}
 
@@ -146,7 +146,6 @@
 		position: relative;
 		background:  #798bde;
 		color: #FFFFFF;
-		height: 10%;
 		padding: 15px;
 		font-size: 16px;
 		text-align: center;
