@@ -7,6 +7,9 @@
 
 	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 	<link rel="stylesheet" href="stylesheet.css">
+	<link rel="stylesheet" href="desktop.css">
+	<link rel="stylesheet" href="mobile.css">
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
@@ -15,7 +18,7 @@
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
 		  integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
 		  crossorigin=""/>
-	<!-- Make sure you put this AFTER Leaflet's CSS -->
+
 	<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
 			integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
 			crossorigin=""></script>
@@ -23,37 +26,46 @@
 	<title>Frontend Mentor | IP Address Tracker</title>
 
 </head>
+
+<!-- Load IP on Page Load -->
 <body onload="getIpData()">
 
+<!-- Top Section -->
 <div class="wrapper">
+	<!--	Title -->
 	<div class="title">IP Address Tracker</div>
+
+	<!--	Input Field-->
 	<div class="form-wrapper">
 		<label for="ip-address-input"></label>
 		<input class="ip-address-input" type="text" id="ip-address-input" placeholder="Search for any IP address"/>
 		<button class="button" id="load-map-button"><img src="images/icon-arrow.svg" alt="right arrow"></button>
 	</div>
+	<!--	Input Error Message -->
 	<span class="error" id="error"></span>
 
+	<!--	IP Info-->
 	<div class="add-info">
-		<span class="inner-grid">
+		<span id="1" class="inner-grid">
 			<span class="row">IP ADDRESS</span>
 			<span class="info" id="ip-address"></span>
 		</span>
-		<span class="inner-grid">
+		<span id="2" class="inner-grid">
 			<span class="row">LOCATION</span>
 			<span class="info" id="location"></span>
 		</span>
-		<span class="inner-grid">
+		<span id="3" class="inner-grid">
 			<span class="row">TIMEZONE</span>
 			<span class="info" id="timezone"></span>
 		</span>
-		<span class="inner-grid">
+		<span id="4"  class="inner-grid">
 			<span class="row">ISP</span>
 			<span class="info" id="isp"></span>
 		</span>
 	</div>
 </div>
 
+<!-- Map -->
 <div class="map" id="map"></div>
 
 <!--  GitHub Links -->
@@ -61,6 +73,8 @@
 	Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
 	Coded by <a href="https://madebywillo.co.uk/" target="_blank">Made by Willo</a>.
 </div>
+
+<!-- Java Script -->
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="script.js"></script>

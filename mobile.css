@@ -1,0 +1,157 @@
+/* Mobile */
+@media screen and (max-width: 875px) {
+	/* Hero */
+	.wrapper {
+		background-image: url("images/pattern-bg-mobile.png");
+		background-size: cover;
+		background-repeat: no-repeat;
+		width: 100vw;
+		height: 405px;
+		display: flex;
+		justify-items: center;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	/* Hero */
+	.title {
+		font-weight: 500;
+		font-size: 26px;
+		line-height: 30px;
+		letter-spacing: -0.285714px;
+		color: #FFFFFF;
+		margin: 28px 0;
+	}
+
+	/* Form */
+	.form-wrapper {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.ip-address-input {
+		background: #FFFFFF;
+		box-shadow: 0 50px 50px -25px rgba(0, 0, 0, 0.0983665);
+		border-radius: 15px 0 0 15px;
+		border: none;
+		width: 65%;
+		height: 58px;
+		font-size: 18px;
+		line-height: 21px;
+		color: var(--Very-Dark-Gray);
+		padding-left: 20px;
+	}
+
+	input[type=text]:is(:focus, :active) {
+		border: none;
+		outline: none;
+	}
+
+	.error {
+		padding-top: 5px;
+		font-size: 18px;
+		color: darkred;
+		font-weight: 800;
+	}
+
+	.button {
+		background: #000000;
+		border-radius: 0 15px 15px 0;
+		border: none;
+		margin-left: -4px;
+		height: 60px;
+		width: 58px;
+		cursor: pointer;
+	}
+
+	.button:hover {
+		background: var(--Very-Dark-Gray);
+	}
+
+	/* Info Grid */
+	.add-info {
+		display: grid;
+		grid-template-rows: repeat(4, 85px);
+		grid-template-columns: 1fr;
+		width: 327px;
+		height: 376px;
+		position: absolute;
+		top: 200px;
+		background: #FFFFFF;
+		box-shadow: 0 50px 50px -25px rgba(0, 0, 0, 0.0983665);
+		border-radius: 15px;
+	}
+
+	.inner-grid {
+		justify-items: center;
+		align-items: center;
+		display: grid;
+		grid-template-rows: repeat(2, 35px);
+		grid-template-columns: 1fr;
+		gap: 5px;
+		overflow-wrap: break-word;
+		margin-top: 25px;
+	}
+
+	#1 {
+		grid-column: 1;
+		grid-row: 2;
+	}
+
+	#2 {
+		grid-column: 1;
+		grid-row: 2;
+	}
+
+	#3 {
+		grid-column: 1;
+		grid-row: 3;
+	}
+
+	#4 {
+		grid-column: 1;
+		grid-row: 4;
+	}
+
+	.inner-grid:last-child {
+		border: none;
+	}
+
+	.row {
+		font-size: 12px;
+		line-height: 14px;
+		letter-spacing: 1.75px;
+		color: var(--Dark-Gray);
+	}
+
+	.info {
+		font-size: 18px;
+		letter-spacing: -0.232143px;
+		color: var(--Very-Dark-Gray);
+		height: 50px;
+	}
+
+	/* Map */
+	#map {
+		z-index: -5;
+		height: 550px;
+		width: 100vw;
+	}
+
+	/* Made By */
+	.attribution {
+		position: relative;
+		background:  #798bde;
+		color: #FFFFFF;
+		padding: 15px;
+		font-size: 16px;
+		text-align: center;
+	}
+
+	.attribution a:visited {
+		color: darkblue;
+	}
+
+}
