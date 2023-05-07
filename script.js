@@ -3,6 +3,8 @@ let lat = '';
 let lng = '';
 let map
 
+//note
+
 const ipAddressInput = document.getElementById('ip-address-input');
 const loadMapButton = document.getElementById('load-map-button');
 
