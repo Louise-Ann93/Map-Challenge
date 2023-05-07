@@ -6,8 +6,9 @@ let map
 const ipAddressInput = document.getElementById('ip-address-input');
 const loadMapButton = document.getElementById('load-map-button');
 
-loadMapButton.addEventListener('click', function () {
+loadMapButton.addEventListener('click', function() {
 	const ipAddress = ipAddressInput.value;
+	console.log(ipAddress); // This should now log the value entered in the input field
 	getIpData(ipAddress, loadMap);
 });
 
@@ -27,19 +28,15 @@ function fetchGeolocationData(ipAddress) {
 	console.log(ipAddress);
 	$.ajax({
 		url: "https://geo.ipify.org/api/v1",
-		data: {apiKey: api_key, ipAddress: ipAddress},
+		data: { apiKey: api_key, ipAddress: ipAddress },
 		success: function (data) {
+			console.log(data);
 			lat = data.location.lat;
 			lng = data.location.lng;
 			loadMap();
-
-			document.getElementById('ip-address').innerHTML = data.ip;
-			document.getElementById('location').innerHTML = `${data.location.city}, ${data.location.country}, <br> ${data.location.region}, ${data.location.postcode ? data.location.postcode : ''}`;
-			document.getElementById('timezone').innerHTML = data.location.timezone;
-			document.getElementById('isp').innerHTML = data.isp;
 		},
 		error: function () {
-			document.getElementById('error').innerHTML = 'Incorrect details added. Please try again';
+			alert('Incorrect details added. Please try again')
 		}
 	});
 }
@@ -51,7 +48,8 @@ function loadMap() {
 
 	let latlng = L.latLng(lat, lng);
 	map = L.map('map', {
-		Zoom: false
+		keyboard: true,
+		dragging: true,
 	}).setView(latlng, 15);
 
 	L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -61,4 +59,9 @@ function loadMap() {
 	L.marker(latlng).addTo(map)
 		.bindPopup('You\'re here!')
 		.openPopup();
+}
+
+function toggleDarkMode() {
+	var element = document.body;
+	element.classList.toggle("dark-mode");
 }
