@@ -2,7 +2,7 @@
 @media screen and (min-width: 875px) {
 	/* Hero */
 	.wrapper {
-		background-image: url("images/pattern-bg-desktop.png");
+		background-image: url("../images/pattern-bg-desktop.png");
 		background-size: cover;
 		background-repeat: no-repeat;
 		width: 100vw;

@@ -2,7 +2,7 @@
 @media screen and (max-width: 875px) {
 	/* Hero */
 	.wrapper {
-		background-image: url("images/pattern-bg-mobile.png");
+		background-image: url("../images/pattern-bg-mobile.png");
 		background-size: cover;
 		background-repeat: no-repeat;
 		width: 100vw;
