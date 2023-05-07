@@ -122,6 +122,7 @@
 
 	.row {
 		font-size: 12px;
+		font-weight: 700;
 		line-height: 14px;
 		letter-spacing: 1.75px;
 		color: var(--Dark-Gray);
@@ -129,6 +130,7 @@
 
 	.info {
 		font-size: 18px;
+		font-weight: 600;
 		letter-spacing: -0.232143px;
 		color: var(--Very-Dark-Gray);
 		height: 50px;
