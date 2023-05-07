@@ -1,18 +1,21 @@
+// Data
+
 const api_key = "at_KkBMx08SskQJsrTVoFFPWVonoMZqO";
 let lat = '';
 let lng = '';
 let map
 
-//note
 
 const ipAddressInput = document.getElementById('ip-address-input');
 const loadMapButton = document.getElementById('load-map-button');
 
+// Search Button
 loadMapButton.addEventListener('click', function () {
 	const ipAddress = ipAddressInput.value;
 	getIpData(ipAddress, loadMap);
 });
 
+// Get IP Address
 function getIpData() {
 	let ipAddress = document.getElementById("ip-address-input").value;
 	if (ipAddress === "") {
@@ -25,8 +28,8 @@ function getIpData() {
 	}
 }
 
+// Find Map from IP
 function fetchGeolocationData(ipAddress) {
-	console.log(ipAddress);
 	$.ajax({
 		url: "https://geo.ipify.org/api/v1",
 		data: {apiKey: api_key, ipAddress: ipAddress},
@@ -46,6 +49,7 @@ function fetchGeolocationData(ipAddress) {
 	});
 }
 
+// Load Map
 function loadMap() {
 	if (map) {
 		map.remove()
@@ -61,6 +65,4 @@ function loadMap() {
 	}).addTo(map);
 
 	L.marker(latlng).addTo(map)
-		.bindPopup('You\'re here!')
-		.openPopup();
 }
