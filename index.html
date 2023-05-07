@@ -7,6 +7,10 @@
 
 	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 	<link rel="stylesheet" href="stylesheet.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
 
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
 		  integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
@@ -18,34 +22,44 @@
 
 	<title>Frontend Mentor | IP Address Tracker</title>
 
-	<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-	<style>
-		.attribution {
-			font-size: 11px;
-			text-align: center;
-		}
-
-		.attribution a {
-			color: hsl(228, 45%, 44%);
-		}
-	</style>
 </head>
 <body onload="getIpData()">
-<button onclick="toggleDarkMode()">Toggle dark mode</button>
 
-<div>
-	IP Address Tracker
-	Search for any IP address or domain
+<div class="wrapper">
+	<div class="title">IP Address Tracker</div>
+	<div class="form-wrapper">
+		<label for="ip-address-input"></label>
+		<input class="ip-address-input" type="text" id="ip-address-input" placeholder="Search for any IP address"/>
+		<button class="button" id="load-map-button"><img src="images/icon-arrow.svg" alt="right arrow"></button>
+	</div>
+	<span class="error" id="error"></span>
+
+	<div class="add-info">
+		<span class="inner-grid">
+			<span class="row">IP ADDRESS</span>
+			<span class="info" id="ip-address"></span>
+		</span>
+		<span class="inner-grid">
+			<span class="row">LOCATION</span>
+			<span class="info" id="location"></span>
+		</span>
+		<span class="inner-grid">
+			<span class="row">TIMEZONE</span>
+			<span class="info" id="timezone"></span>
+		</span>
+		<span class="inner-grid">
+			<span class="row">ISP</span>
+			<span class="info" id="isp"></span>
+		</span>
+	</div>
 </div>
-<label for="ip-address-input">IP Address:</label>
-<input type="text" id="ip-address-input"/>
-<button id="load-map-button">Load Map</button>
 
-<div id="map"></div>
+<div class="map" id="map"></div>
 
+<!--  GitHub Links -->
 <div class="attribution">
 	Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-	Coded by <a href="#">Your Name Here</a>.
+	Coded by <a href="https://madebywillo.co.uk/" target="_blank">Made by Willo</a>.
 </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
